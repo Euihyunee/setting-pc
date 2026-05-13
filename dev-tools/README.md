@@ -13,7 +13,7 @@
 | [`make/`](./make) | GNU Make | `ezwinports.make` |
 | [`aws-cli/`](./aws-cli) | AWS CLI v2 | `Amazon.AWSCLI` |
 | [`docker/`](./docker) | Docker Desktop + compose v2 | `Docker.DockerDesktop` |
-| [`claude-cli/`](./claude-cli) | Claude Code CLI (npm 글로벌, 자동 업데이트) | `@anthropic-ai/claude-code` (npm) |
+| [`claude-cli/`](./claude-cli) | Claude Code CLI (네이티브 설치, 자동 업데이트) | `irm https://claude.ai/install.ps1 \| iex` |
 
 각 폴더 안의 `README.md`에 도구별 설치/검증/사용법이 있고, `install-*.ps1` 스크립트로 자동 설치가 가능합니다.
 
@@ -40,11 +40,12 @@ cd D:\git\setting-pc\dev-tools
 ./make/install-make.ps1
 ./aws-cli/install-aws-cli.ps1
 ./docker/install-docker-desktop.ps1
-./claude-cli/install-claude-cli.ps1              # node/npm 설치 후 실행
+./claude-cli/install-claude-cli.ps1              # git 설치 후 실행
 ```
 
 ### 의존 순서
-- `claude-cli`는 **node/npm이 먼저** 설치되어 있어야 합니다 (npm 글로벌 패키지).
+- `claude-cli` (네이티브) → **git이 먼저** 필요 (Claude Code가 내부적으로 Git Bash 사용).
+- `claude-cli -UseNpm` (레거시) → **node도 필요**.
 - 나머지는 독립적이므로 순서 무관.
 
 각 스크립트는 멱등(idempotent)하므로 여러 번 실행해도 안전합니다.
