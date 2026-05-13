@@ -22,7 +22,8 @@
           },
           "style": "powerline",
           "template": " \ue5ff {{ .Path }} ",
-          "type": "path"
+          "type": "path",
+          "min_width": 100
         },
         {
           "background": "#c19c00",
