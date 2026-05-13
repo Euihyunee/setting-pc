@@ -61,6 +61,25 @@
       "type": "prompt"
     },
     {
+      "alignment": "right",
+      "segments": [
+        {
+          "background": "#2e9599",
+          "foreground": "#ffffff",
+          "leading_diamond": "",
+          "options": {
+            "time_format": "15:04:05"
+          },
+          "style": "diamond",
+          "template": " {{ .CurrentDate | date .Format }} ",
+          "trailing_diamond": "",
+          "type": "time",
+          "min_width": 100
+        }
+      ],
+      "type": "prompt"
+    },
+    {
       "alignment": "left",
       "newline": true,
       "segments": [
