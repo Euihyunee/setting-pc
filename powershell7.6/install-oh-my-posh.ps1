@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-    이 리포의 커스텀 테마(thecyberden-custom)를 PowerShell 7.6 프로필에 등록합니다.
+    이 리포의 커스텀 테마(atomic-custom)를 PowerShell 7.6 프로필에 등록합니다.
 
 .DESCRIPTION
     Oh My Posh 공식 테마 폴더($env:POSH_THEMES_PATH)를 사용하지 않고,
@@ -15,14 +15,14 @@
       1) oh-my-posh 바이너리 설치 여부 확인 (없으면 winget으로 설치)
       2) $PROFILE이 없으면 생성
       3) 기존 oh-my-posh init 라인이 있으면 교체, 없으면 추가
-      4) -ThemePath 파라미터로 사용할 테마 파일 지정 (기본: 이 스크립트와 같은 폴더의 thecyberden-custom.omp.json)
+      4) -ThemePath 파라미터로 사용할 테마 파일 지정 (기본: 이 스크립트와 같은 폴더의 atomic-custom.omp.json)
 
 .PARAMETER ThemePath
-    적용할 .omp.json 파일의 절대 경로. 기본값은 스크립트 폴더 내 thecyberden-custom.omp.json.
+    적용할 .omp.json 파일의 절대 경로. 기본값은 스크립트 폴더 내 atomic-custom.omp.json.
 
 .EXAMPLE
     ./install-oh-my-posh.ps1
-    같은 폴더의 thecyberden-custom.omp.json 적용
+    같은 폴더의 atomic-custom.omp.json 적용
 
 .EXAMPLE
     ./install-oh-my-posh.ps1 -ThemePath "D:\git\setting-pc\powershell7.6\my-theme.omp.json"
@@ -31,7 +31,7 @@
 
 [CmdletBinding()]
 param(
-    [string]$ThemePath = (Join-Path $PSScriptRoot 'thecyberden-custom.omp.json')
+    [string]$ThemePath = (Join-Path $PSScriptRoot 'atomic-custom.omp.json')
 )
 
 $ErrorActionPreference = 'Stop'

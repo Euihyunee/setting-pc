@@ -38,7 +38,7 @@ notepad $PROFILE
 프로필에 추가할 라인 — **이 리포의 커스텀 테마 사용 (권장)**:
 
 ```powershell
-oh-my-posh init pwsh --config "D:\git\setting-pc\powershell7.6\thecyberden-custom.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "D:\git\setting-pc\powershell7.6\atomic-custom.omp.json" | Invoke-Expression
 ```
 
 또는 공식 테마 폴더 사용:
