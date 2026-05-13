@@ -63,14 +63,19 @@ if (-not (Test-Path $PROFILE)) {
 }
 
 # 4) init 라인 갱신 (기존이 있으면 교체)
-$newLine = "oh-my-posh init pwsh --config `"$ThemePath`" | Invoke-Expression"
+$bellScript = Join-Path $PSScriptRoot 'tab-completion-bell.ps1'
+$newLine = "oh-my-posh init pwsh --config `"$ThemePath`" | Invoke-Expression`n. `"$bellScript`""
 $lines = Get-Content $PROFILE
-$pattern = '^\s*oh-my-posh\s+init\b.*$'
+$initPattern = '^\s*oh-my-posh\s+init\b.*$'
+$bellPattern = '^\s*\.\s+"[^"]*tab-completion-bell\.ps1"\s*$'
 $replaced = $false
 $updated = foreach ($line in $lines) {
-    if ($line -match $pattern) {
+    if ($line -match $initPattern) {
         $replaced = $true
         $newLine
+    } elseif ($line -match $bellPattern) {
+        # 기존 dot-source 라인은 새 $newLine에 이미 포함되어 있으므로 제거
+        continue
     } else {
         $line
     }
