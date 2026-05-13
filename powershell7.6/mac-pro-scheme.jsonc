@@ -1,0 +1,37 @@
+// Windows Terminal 색 구성표 — Mac Terminal.app "Pro" 테마 포트
+//
+// 사용법:
+//   1) Windows Terminal → Ctrl + , → "JSON 파일 열기"
+//   2) settings.json의 "schemes" 배열에 아래 객체 통째로 추가
+//   3) 사용할 프로필의 "colorScheme": "Mac Pro" 로 지정
+//      (defaults 블록에 넣으면 모든 프로필에 일괄 적용)
+//
+// 참고: 진정한 Mac 느낌을 위해 함께 권장되는 설정
+//   - "useAcrylic": true
+//   - "opacity": 90~95
+//   - "font": { "face": "MesloLGM Nerd Font", "size": 12 }
+//   - "cursorShape": "bar"
+//   - "padding": "12, 10, 12, 10"
+{
+  "name": "Mac Pro",
+  "background": "#000000",
+  "foreground": "#F2F2F2",
+  "cursorColor": "#4D4D4D",
+  "selectionBackground": "#414141",
+  "black": "#000000",
+  "red": "#990000",
+  "green": "#00A600",
+  "yellow": "#999900",
+  "blue": "#0000B2",
+  "purple": "#B200B2",
+  "cyan": "#00A6B2",
+  "white": "#BFBFBF",
+  "brightBlack": "#666666",
+  "brightRed": "#E50000",
+  "brightGreen": "#00D900",
+  "brightYellow": "#E5E500",
+  "brightBlue": "#0000FF",
+  "brightPurple": "#E500E5",
+  "brightCyan": "#00E5E5",
+  "brightWhite": "#E5E5E5"
+}
